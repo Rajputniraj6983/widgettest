@@ -11,10 +11,15 @@ class WidgetTest extends StatelessWidget {
     return CupertinoPageScaffold(
       backgroundColor: CupertinoColors.tertiarySystemFill,
       child: Center(
-        // child: Container(height: 400,width: 350,child: Image.asset('assets/widget.jpg',fit: BoxFit.cover,)),
+          child: BackdropFilter(
+        filter: ImageFilter.blur(),
         child: Stack(
           children: [
-            Container(height: double.infinity,width: double.infinity,child: Image.asset('assets/download (2).jpg'),),
+            Container(
+              height: double.infinity,
+              width: double.infinity,
+              child: Image.asset('assets/download (2).jpg'),
+            ),
             Center(
               child: Container(
                 height: 300,
@@ -123,30 +128,32 @@ class WidgetTest extends StatelessWidget {
                             width: 20,
                             child: Text(
                               '4K',
-                              style:
-                              TextStyle(color: CupertinoColors.white, fontSize: 10),
+                              style: TextStyle(
+                                  color: CupertinoColors.white, fontSize: 10),
                             ),
                             decoration: BoxDecoration(
-                                border:
-                                Border.all(width: 2, color: CupertinoColors.white),
-                                borderRadius: BorderRadius.all(Radius.circular(5))),
+                                border: Border.all(
+                                    width: 2, color: CupertinoColors.white),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5))),
                           ),
                           SizedBox(width: 5),
                           Container(
                             height: 20,
                             width: 40,
                             child: Padding(
-                              padding: const EdgeInsets.only(top: 2,left: 8),
+                              padding: const EdgeInsets.only(top: 2, left: 8),
                               child: Text(
                                 'PSD',
-                                style:
-                                TextStyle(color: CupertinoColors.white, fontSize: 10),
+                                style: TextStyle(
+                                    color: CupertinoColors.white, fontSize: 10),
                               ),
                             ),
                             decoration: BoxDecoration(
-                                border:
-                                Border.all(width: 2, color: CupertinoColors.white),
-                                borderRadius: BorderRadius.all(Radius.circular(5))),
+                                border: Border.all(
+                                    width: 2, color: CupertinoColors.white),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5))),
                           ),
                         ],
                       ),
@@ -159,8 +166,11 @@ class WidgetTest extends StatelessWidget {
               ),
             ),
           ],
-        )
-      ),
+        ),
+      )
+          // child: Container(height: 400,width: 350,child: Image.asset('assets/widget.jpg',fit: BoxFit.cover,)),
+
+          ),
     );
   }
 }
